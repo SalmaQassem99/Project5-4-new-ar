@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content=" This Is Description For Project 5" />
+  <title>Project 5</title>
+  <!--Bootstrap File-->
+  <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+  <!--Main Css File-->
+  <link rel="stylesheet" href="./styles/main.css" />
+  <!--Icons Library-->
+  <link rel="stylesheet" href="./styles/all.min.css" />
+</head>
+
+<body>
+  <div class="pop-overlay"></div>
+  <div class="popup d-flex flex-column justify-content-center align-items-center gap-3 rotate-phone">
+    <div class="message">flip the device to play</div>
+    <div class="phone"></div>
+  </div>
+  <div class="game d-flex flex-column justify-content-between">
+    <div class="head d-flex justify-content-between">
+      <div class="controls d-flex gap-3">
+        <button class="back icon d-flex justify-content-center align-items-center">
+          <i class="fa-solid fa-right-long"></i>
+        </button>
+        <button class="sound icon d-flex justify-content-center align-items-center">
+          <i class="fa-solid fa-volume-high"></i>
+          <i class="fa-solid fa-volume-xmark off"></i>
+        </button>
+        <button class="info icon d-flex justify-content-center align-items-center" text="استمع ثم ردد">
+          <i class="fa-solid fa-exclamation"></i>
+        </button>
+        <button class="pause icon d-flex justify-content-center align-items-center">
+          <i class="fa-solid fa-pause"></i>
+        </button>
+      </div>
+      <div class="scoreWrapper d-flex align-items-center">
+        <div class="scoreItem d-flex align-items-center">
+          <div class="score"></div>
+        </div>
+        <div class="scoreIcon d-flex align-items-center justify-content-center">
+          <img src="./media/images/score.svg" class="w-100 h-100 object-fit-contain" alt="score-icon" />
+        </div>
+      </div>
+    </div>
+    <div class="cardContainer container">
+      <div class="card-wrapper w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="text d-flex flex-column justify-content-center">
+          <div class="first-line">
+            <span class="first-letter d-inline-block">ا</span>
+            <p class="first-word d-inline" data-text="ستمع">ستمع</p>
+          </div>
+          <div class="second-line d-flex align-items-center gap-5">
+            <div class="second-word d-flex gap-1 align-items-center">
+              <p class="letter m-0">ثم
+                <img src="./media/images/drop1.svg" alt="drop-1" class="drop1-vector w-100 object-fit-contain" />
+                <img src="./media/images/drop2.svg" alt="drop-2" class="drop2-vector w-100 object-fit-contain" />
+              </p>
+            </div>
+            <p class="third-word m-0 d-inline-flex" data-text="ردد">ردد</p>
+          </div>
+        </div>
+        <button class="play rounded-pill position-absolute">
+          <div class="vectors w-100 h-100 position-relative d-flex justify-content-center align-items-center">
+            <div class="btn-vector top d-flex align-items-center justify-content-center position-absolute">
+              <img src="./media/images/buttonVector1.svg" alt="btn-vector-1" class="w-100 h-100 object-fit-contain" />
+            </div>
+            <i class="fa-solid fa-play"></i>
+            <div class="btn-vector bottom d-flex align-items-center justify-content-center position-absolute">
+              <img src="./media/images/buttonVector2.svg" alt="btn-vector-2" class="w-100 h-100 object-fit-contain" />
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div class="body w-100 d-flex align-items-center gap-3">
+      <button class="leftButton arrow disabled rounded-4 d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <div class="body-wrapper h-100 d-flex flex-column">
+        <div class="images-container first-row d-flex justify-content-between align-items-center">
+          <div class="img-container d-flex justify-content-centetr align-items-end">
+            <div class="img-wrapper w-100 d-flex justify-content-center align-items-end" data-id="1">
+              <img src="./media/images/img1.svg" alt="picture-1" class=" w-100 img" />
+              <span class="card-text">سيارة الحلوى</span>
+            </div>
+          </div>
+          <div class="img-container d-flex justify-content-center align-items-end">
+            <div class="img-wrapper w-100 d-flex justify-content-center align-items-end" data-id="3">
+              <img src="./media/images/img2.svg" alt="picture-3" class="w-100 object-fit-contain img" />
+              <span class="card-text">سيارة</span>
+            </div>
+          </div>
+          <div class="img-container d-flex justify-content-center align-items-end">
+            <div class="img-wrapper w-100 d-flex justify-content-center align-items-end" data-id="4">
+              <img src="./media/images/img3.svg" alt="picture-4" class="w-100 object-fit-contain img" />
+              <span class="card-text">طائرة</span>
+            </div>
+          </div>
+          <div class="img-container d-flex justify-content-center align-items-end">
+            <div class="img-wrapper w-100 d-flex justify-content-center align-items-end" data-id="2">
+              <img src="./media/images/img4.svg" alt="picture-2" class="w-100 object-fit-contain img" />
+              <span class="card-text">حافلة</span>
+            </div>
+          </div>
+        </div>
+        <div class="images-container second-row d-flex justify-content-start align-items-center">
+          <div class="img-container d-flex justify-content-center align-items-end">
+            <div class="img-wrapper w-100 d-flex justify-content-center align-items-end" data-id="5">
+              <img src="./media/images/img5.svg" alt="picture-5" class="w-100 object-fit-contain img" />
+              <span class="card-text">سيارة أجرة</span>
+            </div>
+          </div>
+          <div class="img-container d-flex justify-content-center align-items-end">
+            <div class="img-wrapper w-100 d-flex justify-content-center align-items-end" data-id="6">
+              <img src="./media/images/img6.svg" alt="picture-6" class="w-100 object-fit-contain img" />
+              <span class="card-text">دراجة نارية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="rightButton arrow rounded-4 d-flex justify-content-center align-items-center">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+    </div>
+  </div>
+  <div class="success-wrapper">
+    <div class="success-card rounded-5 p-3">
+      <button class="closeModal rounded-circle">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="card-wrapper h-100 rounded-5">
+        <div class="img-wrapper d-flex justify-content-center align-items-center">
+          <img src="./media/images/bunny.svg" alt="bunny image" class="w-100 h-100 object-fit-contain" />
+        </div>
+        <div class="content-card d-flex flex-column ">
+          <div class="outer-card rounded-1">
+            <div class="text-card h-100 d-flex gap-3 justify-content-center align-items-center">
+              <div class="content d-flex flex-column align-items-center">
+                <p class="message-text text m-0" text="الإجابات الصحيحة">
+                  الإجابات الصحيحة
+                </p>
+                <p class="score-text text m-0 d-flex justify-content-center gap-2 flex-wrap" text=""></p>
+              </div>
+              <div class="score-icon-wrapper">
+                <img src="./media/images/object.svg" alt="score image" class="w-100 h-100 object-fit-contain" />
+              </div>
+            </div>
+          </div>
+          <div class="arrows d-flex justify-content-between">
+            <button class="left-arrow arrow disabled d-flex justify-content-center align-items-center rounded-circle">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <button class="right-arrow arrow d-flex justify-content-center align-items-center rounded-circle">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+  <audio id="start-audio" src="./media/audios/audio.mp3"></audio>
+  <audio id="success" src="./media/audios/audio.mp3"></audio>
+  <audio id="1" src="./media/audios/audio.mp3"></audio>
+  <audio id="2" src="./media/audios/audio.mp3"></audio>
+  <audio id="3" src="./media/audios/audio.mp3"></audio>
+  <audio id="4" src="./media/audios/audio.mp3"></audio>
+  <audio id="5" src="./media/audios/audio.mp3"></audio>
+  <audio id="6" src="./media/audios/audio.mp3"></audio>
+  <script src="./JS/script.js" async></script>
+</body>
+
+</html>
