@@ -116,7 +116,8 @@ const resetTimer = () => {
 document.addEventListener("mousemove", resetTimer);
 document.addEventListener("touchstart", resetTimer);
 const checkScreen = () => {
-  const isMobile = window.innerWidth < 768;
+  const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+  const isMobile = window.innerWidth < 768 && isPortrait;
   return isMobile;
 };
 window.addEventListener("load", () => {
