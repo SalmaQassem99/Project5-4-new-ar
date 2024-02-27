@@ -7,7 +7,9 @@ const infoIcon = document.querySelector(".info.icon");
 const scoreWrapper = document.querySelector(".game .scoreWrapper");
 const score = document.querySelector(".game .scoreItem .score");
 const body = document.querySelector(".body");
-const gameImages = document.querySelectorAll(".body-wrapper .img-container .img-wrapper");
+const gameImages = document.querySelectorAll(
+  ".body-wrapper .img-container .img-wrapper"
+);
 const arrows = document.querySelectorAll(".game .body .arrow");
 const pauseButton = document.querySelector(".game .pause.icon");
 const iconsArr = [...arrows, pauseButton];
@@ -121,12 +123,15 @@ const checkScreen = () => {
   return isMobile;
 };
 window.addEventListener("load", () => {
-  animateInfo();
   const is_mobile = checkScreen();
+  console.log(is_mobile);
   if (is_mobile) {
     popupModal.style.visibility = "visible";
     popupOverlay.style.visibility = "visible";
+  } else {
+    game.style.visibility = "visible";
   }
+  animateInfo();
 });
 soundButton.addEventListener("click", () => {
   const onIcon = soundButton.querySelector(".fa-solid:not(.off)");
@@ -156,6 +161,7 @@ window.addEventListener("orientationchange", function () {
   const is_mobile = checkScreen();
   if (is_mobile) {
     if (window.orientation === 90 || window.orientation === -90) {
+      game.style.visibility = "visible";
       popupModal.style.visibility = "hidden";
       popupOverlay.style.visibility = "hidden";
     } else {
