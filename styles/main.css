@@ -204,7 +204,7 @@ a {
 .icon.pause {
   height: 100%;
   position: absolute;
-  left: 0;
+  right: 0;
   top: calc(100vh - 3rem);
   transform: translateY(-100%);
   transition: 0.5s;
