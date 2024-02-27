@@ -44,30 +44,6 @@ a {
   text-decoration: none;
 }
 
-/*@font-face {
-  font-family: Modak-Regular;
-  src: url("../fonts/Modak-Regular.ttf");
-}
-@font-face {
-  font-family: RammettoOne-Regular;
-  src: url("../fonts/RammettoOne-Regular.ttf");
-}
-@font-face {
-  font-family: NotoSansMalayalam-SemiBold;
-  src: url("../fonts/NotoSansMalayalam-SemiBold.ttf");
-}
-@font-face {
-  font-family: MochiyPopPOne-Regular;
-  src: url("../fonts/MochiyPopPOne-Regular.ttf");
-}
-@font-face {
-  font-family: LilitaOne-Regular;
-  src: url("../fonts/LilitaOne-Regular.ttf");
-}
-@font-face {
-  font-family: DarumadropOne-Regular;
-  src: url("../fonts/DarumadropOne-Regular.ttf");
-}*/
 @font-face {
   font-family: DG-3asomy-Regular;
   src: url("../fonts/DG-3asomy-Regular.ttf");
@@ -79,6 +55,10 @@ a {
 @font-face {
   font-family: LilitaOne-Regular;
   src: url("../fonts/LilitaOne-Regular.ttf");
+}
+@font-face {
+  font-family: DarumadropOne-Regular;
+  src: url("../fonts/DarumadropOne-Regular.ttf");
 }
 .game .cardContainer .card-wrapper .text .second-line .third-word::before, .game .cardContainer .card-wrapper .text .first-line .first-word::before {
   content: attr(data-text);
