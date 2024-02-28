@@ -124,7 +124,6 @@ const checkScreen = () => {
 };
 window.addEventListener("load", () => {
   const is_mobile = checkScreen();
-  console.log(is_mobile);
   if (is_mobile) {
     popupModal.style.visibility = "visible";
     popupOverlay.style.visibility = "visible";
@@ -159,8 +158,8 @@ document.addEventListener("contextmenu", function (event) {
 });
 window.addEventListener("orientationchange", function () {
   const is_mobile = checkScreen();
-  if (is_mobile) {
-    if (window.orientation === 90 || window.orientation === -90) {
+  if (window.orientation === 90 || window.orientation === -90) {
+    if (is_mobile) {
       game.style.visibility = "visible";
       popupModal.style.visibility = "hidden";
       popupOverlay.style.visibility = "hidden";
@@ -168,5 +167,8 @@ window.addEventListener("orientationchange", function () {
       popupModal.style.visibility = "visible";
       popupOverlay.style.visibility = "visible";
     }
+  } else {
+    popupModal.style.visibility = "visible";
+    popupOverlay.style.visibility = "visible";
   }
 });
