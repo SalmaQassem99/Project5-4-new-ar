@@ -89,6 +89,8 @@ const addCloseAnimation = () => {
   successModal.classList.add("hide");
   successModal.style.visibility = "hidden";
   overlay.classList.remove("show");
+  const link = document.querySelector(".link-address").textContent;
+  window.location.href = link;
 };
 document.addEventListener("click", function (event) {
   const isVisible =
