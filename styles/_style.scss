@@ -160,7 +160,6 @@ $margin: -9.5rem;
   position: relative;
   overflow-y: auto;
   visibility: hidden;
-  background-image: url("../media/images/background.svg");
   background-size: cover;
   background-position: 50% 100%;
 
@@ -247,7 +246,6 @@ $margin: -9.5rem;
           line-height: 1;
           transform: translateX(-15%);
 
-
           .first-letter {
             color: $pink-1;
             font-size: 28vh;
@@ -302,7 +300,6 @@ $margin: -9.5rem;
                 left: 0;
                 transform: translate(-13%, 100%) scaleX(-1);
               }
-
             }
           }
 
@@ -675,12 +672,14 @@ $margin: -9.5rem;
           transform: rotate(-1.5deg);
 
           .text-card {
-            background: linear-gradient(to bottom,
-                transparent 20%,
-                $orange-2 20% 45%,
-                transparent 45% 60%,
-                $orange-3 60% 80%,
-                transparent 80%);
+            background: linear-gradient(
+              to bottom,
+              transparent 20%,
+              $orange-2 20% 45%,
+              transparent 45% 60%,
+              $orange-3 60% 80%,
+              transparent 80%
+            );
             color: $black-1;
             font-size: 140%;
             text-transform: capitalize;
@@ -834,7 +833,6 @@ $margin: -9.5rem;
 }
 
 @keyframes rotatePhone {
-
   0%,
   10% {
     transform: rotate(0deg);

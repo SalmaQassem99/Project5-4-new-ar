@@ -197,7 +197,6 @@ a {
   position: relative;
   overflow-y: auto;
   visibility: hidden;
-  background-image: url("../media/images/background.svg");
   background-size: cover;
   background-position: 50% 100%;
 }
