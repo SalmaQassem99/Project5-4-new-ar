@@ -63,16 +63,18 @@ gameImages.forEach((image) => {
     document
       .querySelector(":root")
       .style.setProperty("--width", `${(100 / gameImages.length) * counter}%`);
-    if (counter === gameImages.length) {
-      const text = document.querySelector(".text-card .score-text");
-      text.textContent = `${counter}/${gameImages.length}`;
-      successModal.style.visibility = "visible";
-      overlay.classList.add("show");
-      successModal.classList.add("show");
-      setTimeout(() => {
+    const itemAudio = document.querySelector(`audio[id="${image.dataset.id}"]`);
+    itemAudio.play();
+    itemAudio.addEventListener("ended", () => {
+      if (counter === gameImages.length) {
+        const text = document.querySelector(".text-card .score-text");
+        text.textContent = `${counter}/${gameImages.length}`;
+        successModal.style.visibility = "visible";
+        overlay.classList.add("show");
+        successModal.classList.add("show");
         document.querySelector(`audio[id="success"]`).play();
-      }, 500);
-    }
+      }
+    });
   });
 });
 const hideItems = () => {
