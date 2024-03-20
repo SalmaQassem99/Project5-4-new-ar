@@ -175,6 +175,50 @@
   <audio id="4" src="./media/audios/audio.mp3"></audio>
   <audio id="5" src="./media/audios/audio.mp3"></audio>
   <audio id="6" src="./media/audios/audio.mp3"></audio>
+  <script>
+    const closeButton = document.querySelector(".closeModal");
+    const successItem = document.querySelector(".success-wrapper");
+    const overlay = document.querySelector(".overlay");
+    const gameContainer = document.querySelector(".game");
+
+    successItem.addEventListener("animationend", () => {
+      if (successItem.classList.contains("show")) {
+        successItem.classList.remove("show");
+      }
+      else if (successItem.classList.contains("hide")) {
+        successItem.classList.remove("hide");
+        const link = document.querySelector(".link-address").textContent;
+        if (link !== "") {
+          gameContainer.classList.add("hideGame");
+          gameContainer.addEventListener("animationend", () => {
+            gameContainer.style.visibility = "hidden";
+            window.location.href = link;
+          })
+        }
+      }
+    });
+    const addCloseAnimation = () => {
+      closeButton.classList.add("animate");
+      closeButton.addEventListener("animationend", () => {
+        closeButton.classList.remove("animate");
+      });
+      successItem.classList.add("hide");
+      successItem.style.visibility = "hidden";
+      overlay.classList.remove("show");
+    };
+    document.addEventListener("click", function (event) {
+      const isVisible =
+        window.getComputedStyle(successItem).visibility === "visible";
+      var isClickInside =
+        successItem.contains(event.target) || event.target === closeButton;
+      if (!isClickInside && isVisible) {
+        addCloseAnimation();
+      }
+    });
+    closeButton.addEventListener("click", () => {
+      addCloseAnimation();
+    });
+  </script>
   <script src="./JS/script.js" async></script>
 </body>
 

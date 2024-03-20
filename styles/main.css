@@ -199,10 +199,13 @@ a {
   visibility: hidden;
   background-size: cover;
   background-position: 50% 100%;
+  transform-origin: right top;
 }
-.game.hide {
-  animation-name: scaleDown;
-  animation-duration: 0.5s;
+.game.hideGame {
+  animation-name: hideGame;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 .game .head {
@@ -685,6 +688,14 @@ a {
   }
   100% {
     transform: translateZ(-1px) scaleX(1);
+  }
+}
+@keyframes hideGame {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
   }
 }
 @keyframes scaleDown {

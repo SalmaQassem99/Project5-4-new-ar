@@ -15,8 +15,6 @@ const pauseButton = document.querySelector(".game .pause.icon");
 const iconsArr = [...arrows, pauseButton];
 const scoreElement = document.querySelector(".scoreWrapper .score");
 const successModal = document.querySelector(".success-wrapper");
-const closeButton = document.querySelector(".closeModal");
-const overlay = document.querySelector(".overlay");
 const soundButton = document.querySelector(".game .sound.icon");
 let counter = 0;
 let soundOn = true;
@@ -76,33 +74,6 @@ gameImages.forEach((image) => {
       }, 500);
     }
   });
-});
-successModal.addEventListener("animationend", () => {
-  successModal.classList.remove("show");
-  successModal.classList.remove("hide");
-});
-const addCloseAnimation = () => {
-  closeButton.classList.add("animate");
-  closeButton.addEventListener("animationend", () => {
-    closeButton.classList.remove("animate");
-  });
-  successModal.classList.add("hide");
-  successModal.style.visibility = "hidden";
-  overlay.classList.remove("show");
-  const link = document.querySelector(".link-address").textContent;
-  window.location.href = link;
-};
-document.addEventListener("click", function (event) {
-  const isVisible =
-    window.getComputedStyle(successModal).visibility === "visible";
-  var isClickInside =
-    successModal.contains(event.target) || event.target === closeButton;
-  if (!isClickInside && isVisible) {
-    addCloseAnimation();
-  }
-});
-closeButton.addEventListener("click", () => {
-  addCloseAnimation();
 });
 const hideItems = () => {
   iconsArr.forEach((item) => {
