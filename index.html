@@ -28,7 +28,7 @@
         <button class="back icon d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-right-long"></i>
         </button>
-        <button class="sound icon d-flex justify-content-center align-items-center">
+        <button class="sound icon justify-content-center align-items-center">
           <i class="fa-solid fa-volume-high"></i>
           <i class="fa-solid fa-volume-xmark off"></i>
         </button>
@@ -37,6 +37,7 @@
         </button>
         <button class="pause icon d-flex justify-content-center align-items-center">
           <i class="fa-solid fa-pause"></i>
+          <i class="fa-solid fa-play hide"></i>
         </button>
       </div>
       <div class="scoreWrapper d-flex align-items-center">
@@ -191,7 +192,8 @@
         if (link !== "") {
           gameContainer.classList.add("hideGame");
           gameContainer.addEventListener("animationend", () => {
-            gameContainer.style.visibility = "hidden";
+            gameContainer.style.transform = "scale(0)";
+            gameContainer.classList.remove("hideGame");
             window.location.href = link;
           })
         }

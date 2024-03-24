@@ -82,7 +82,7 @@ $margin: -9.5rem;
   max-height: 3rem;
   aspect-ratio: 1;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   background: linear-gradient(to bottom, $yellow-3 2%, $yellow-2);
   color: $white-1;
   font-size: 1.25rem;
@@ -95,6 +95,7 @@ $margin: -9.5rem;
   }
 
   &.sound {
+    display: none;
     .fa-solid {
       &.off {
         display: none;
@@ -150,6 +151,12 @@ $margin: -9.5rem;
     top: calc(100vh - (2 * $padding));
     transform: translateY(-100%);
     transition: 0.5s;
+    visibility: hidden;
+    .fa-solid {
+      &.hide {
+        display: none;
+      }
+    }
   }
 }
 
@@ -663,6 +670,9 @@ $margin: -9.5rem;
         margin: 0 auto;
         position: relative;
         top: -3vh;
+        img {
+          transform: scaleX(-1);
+        }
       }
 
       .content-card {

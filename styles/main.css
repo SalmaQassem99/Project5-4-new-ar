@@ -134,7 +134,7 @@ a {
   max-height: 3rem;
   aspect-ratio: 1;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   background: linear-gradient(to bottom, #febf47 2%, #f0b700);
   color: #fff;
   font-size: 1.25rem;
@@ -144,6 +144,9 @@ a {
 }
 .icon .fa-solid {
   filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+.icon.sound {
+  display: none;
 }
 .icon.sound .fa-solid.off {
   display: none;
@@ -188,6 +191,10 @@ a {
   top: calc(100vh - 3rem);
   transform: translateY(-100%);
   transition: 0.5s;
+  visibility: hidden;
+}
+.icon.pause .fa-solid.hide {
+  display: none;
 }
 
 .game {
@@ -617,6 +624,9 @@ a {
   margin: 0 auto;
   position: relative;
   top: -3vh;
+}
+.success-wrapper .success-card .card-wrapper .img-wrapper img {
+  transform: scaleX(-1);
 }
 .success-wrapper .success-card .card-wrapper .content-card {
   height: 60%;
